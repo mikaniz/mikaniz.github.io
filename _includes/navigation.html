@@ -1,0 +1,17 @@
+<nav>
+    <div>
+    {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+    </div>
+    <a href="/">log(mikaniz)</a>
+    <div class="search-bar">
+        <label for="search">
+            <div class="search-icon">
+                <div class="search-icon-circle"></div>
+                <div class="search-icon-line"></div>
+            </div>
+        </label>
+        <input type="text" id="search">
+    </div>
+</nav>

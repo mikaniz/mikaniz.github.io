@@ -1,0 +1,29 @@
+utl: https://mikaniz.github.io/
+title:
+paginate: 5
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+      values:
+      layout: "post"
+  - scope:
+      path: ""
+      values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate

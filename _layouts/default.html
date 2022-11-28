@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    {% feed_meta %} {% seo %}
+  </head>
+  <body>
+    <header>{% include navigation.html %}</header>
+    <main>{{ content }}</main>
+    <footer>
+      <p>COPYRIGHT 2022. mikaniz. All rights reserved.</p>
+      <p>
+        <a href="mailto:k515jina@gmail.com">k515jina@gmail.com</a> |
+        <a href="https://github.com/mikaniz">Github</a>
+      </p>
+    </footer>
+  </body>
+</html>

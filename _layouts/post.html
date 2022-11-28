@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<article>
+  <div class="post-information">
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.date | date: "%F" }}</p>
+    <p>{{ page.summary }}</p>
+  </div>
+  <div class="post-contents">{{ content }}</div>
+</article>
