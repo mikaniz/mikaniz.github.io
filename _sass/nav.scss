@@ -1,0 +1,79 @@
+nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  font-size: 20px;
+  color: $background-color;
+  text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+    0 -1px $text-color;
+  box-shadow: 1px 1px 5px $shadow-color;
+  div {
+    display: flex;
+    margin: auto 10px;
+  }
+  a {
+    margin: auto 40px;
+    color: $background-color;
+    &.current {
+      text-decoration: overline;
+    }
+  }
+}
+
+.search-bar {
+  visibility: hidden;
+  input {
+    margin: 0px 30px;
+    background-color: $background-color;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px $shadow-color;
+    padding: 5px 10px;
+  }
+  .search-icon {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5px 0px;
+    width: 16px;
+    height: 16px;
+    &:hover {
+      .search-icon-circle {
+        border-color: $point-color;
+      }
+      .search-icon-line {
+        border-color: $point-color;
+      }
+    }
+  }
+  .search-icon-circle {
+    width: 8px;
+    height: 8px;
+    border: 2px solid $text-color;
+    border-radius: 50%;
+  }
+  .search-icon-line {
+    width: 6px;
+    border: 1px solid $text-color;
+    border-radius: 1px;
+    transform: translate3d(8px, -1px, 0) rotate(45deg);
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    justify-content: center;
+    height: 100px;
+    font-size: 30px;
+    text-shadow: -3px 0 $text-color, 0 3px $text-color, 3px 0 $text-color,
+      0 -3px $text-color;
+    div {
+      display: none;
+    }
+  }
+}

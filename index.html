@@ -1,0 +1,55 @@
+---
+layout: default
+title: mikaniz
+---
+
+<article>
+  <ul class="posts">
+    {% for post in paginator.posts %}
+    <a href="{{ post.url }}">
+      <li>
+        <div>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.date | date: "%F" }}</p>
+          <p>{{ post.summary }}</p>
+        </div>
+        <div>
+          {% if post.thumbnail %}
+          <img class="thumbnail" src="{{ post.thumbnail }}" />
+          {% endif %}
+        </div>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous"> ﹤ </a>
+    {% else %}
+    <span class="previous"> ﹤ </span>
+    {% endif %}
+    <span class="page_number">
+      <!-- Page: {{ paginator.page }} of {{ paginator.total_pages }} -->
+      {% for page in (1..paginator.total_pages) %} {% if page ==
+      paginator.page%}
+      <u>{{ page }}</u>
+      {% elsif page == 1 %}
+      <a
+        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+        >{{ page }}</a
+      >
+      {% else %}
+      <a
+        href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+        >{{ page }}</a
+      >
+      {% endif %} {% endfor %}
+    </span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next"> ﹥ </a>
+    {% else %}
+    <span class="next"> ﹥ </span>
+    {% endif %}
+  </div>
+</article>

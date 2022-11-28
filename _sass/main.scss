@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+
+$background-color: ghostwhite;
+$primary-color: #eeeeee;
+$hover-color: lightsteelblue;
+$point-color: steelblue;
+$text-color: black;
+$code-color: salmon;
+$code-block-color: #eeeeee;
+$shadow-color: #999999;
+
+body {
+  width: 100%;
+  margin: 0;
+  background: $background-color;
+  color: $text-color;
+  font-family: "Song Myung", serif;
+  a {
+    text-decoration: none;
+    color: $text-color;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  ul {
+    padding-left: 20px;
+  }
+}
+
+main {
+  display: flex;
+  padding-top: 100px;
+  * {
+    box-sizing: border-box;
+    word-break: keep-all;
+  }
+  article {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    a {
+      color: $text-color;
+    }
+    .pagination {
+      width: fit-content;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+footer {
+  padding: 5px;
+  background-color: $primary-color;
+  font-size: smaller;
+  color: $background-color;
+  text-align: center;
+  text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+    0 -1px $text-color;
+  box-shadow: -1px -1px 5px $shadow-color;
+  a {
+    color: $background-color;
+  }
+}
+
+.posts {
+  padding: 0px;
+  li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 50px 0px;
+    padding: 30px;
+    border-top: 20px solid $primary-color;
+    border-radius: 0.5rem;
+    color: $background-color;
+    text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+      0 -1px $text-color;
+    box-shadow: -1px -1px 5px $shadow-color;
+    font-size: larger;
+  }
+  .thumbnail {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 150px;
+  }
+}
+
+.post-information {
+  margin: 50px 0px;
+  padding: 30px;
+  border-top: 20px solid $primary-color;
+  border-radius: 0.5rem;
+  font-size: larger;
+  color: $background-color;
+  text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+    0 -1px $text-color;
+  box-shadow: -1px -1px 5px $shadow-color;
+}
+
+.post-contents,
+.about {
+  margin: 50px 0px;
+  line-height: 150%;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: small;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $text-color;
+    font-weight: 700;
+  }
+  strong {
+    color: $point-color;
+  }
+}
+
+.about {
+  width: 40%;
+  img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  footer,
+  .posts li,
+  .post-information {
+    text-shadow: -3px 0 $text-color, 0 3px $text-color, 3px 0 $text-color,
+      0 -3px $text-color;
+  }
+  body {
+    font-size: 30px;
+    .posts li,
+    .post-information {
+      padding: 30px 50px;
+      border-top: 50px solid $primary-color;
+    }
+    article {
+      width: 80%;
+    }
+  }
+}
