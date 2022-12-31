@@ -67,18 +67,22 @@ footer {
 
 .posts {
   padding: 0px;
+  div {
+    height: 200px;
+  }
+  .post {
+    &:not(:first-child) {
+      border-top: 0.5px solid $shadow-color;
+    }
+  }
   li {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin: 50px 0px;
-    padding: 30px;
-    border-top: 20px solid $primary-color;
-    border-radius: 0.5rem;
+    padding: 10px;
     color: $background-color;
     text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
       0 -1px $text-color;
-    box-shadow: -1px -1px 5px $shadow-color;
     font-size: larger;
   }
   .thumbnail {
@@ -90,15 +94,13 @@ footer {
 }
 
 .post-information {
-  margin: 50px 0px;
-  padding: 30px;
-  border-top: 20px solid $primary-color;
-  border-radius: 0.5rem;
+  margin: 10px 0px;
+  padding: 30px 0px;
+  border-bottom: 1px solid $primary-color;
   font-size: larger;
   color: $background-color;
   text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
     0 -1px $text-color;
-  box-shadow: -1px -1px 5px $shadow-color;
 }
 
 .post-contents,
@@ -133,18 +135,21 @@ footer {
   footer,
   .posts li,
   .post-information {
-    text-shadow: -3px 0 $text-color, 0 3px $text-color, 3px 0 $text-color,
-      0 -3px $text-color;
+    font-size: 15px;
+    text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+      0 -1px $text-color;
+  }
+  .post {
+    padding: 20px 10px;
   }
   body {
     font-size: 30px;
-    .posts li,
-    .post-information {
-      padding: 30px 50px;
-      border-top: 50px solid $primary-color;
-    }
     article {
       width: 80%;
+    }
+    .pagination,
+    footer {
+      font-size: 10px;
     }
   }
 }

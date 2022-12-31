@@ -6,20 +6,25 @@ title: mikaniz
 <article>
   <ul class="posts">
     {% for post in paginator.posts %}
-    <a href="{{ post.url }}">
-      <li>
-        <div>
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.date | date: "%F" }}</p>
-          <p>{{ post.summary }}</p>
-        </div>
-        <div>
+    <div class="post">
+      <a href="{{ post.url }}">
+        <li>
+          <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.date | date: "%F" }}</p>
+            <p>{{ post.summary }}</p>
+          </div>
           {% if post.thumbnail %}
-          <img class="thumbnail" src="{{ post.thumbnail }}" />
+          <div>
+            <img class="thumbnail" src="{{ post.thumbnail }}" />
+          </div>
           {% endif %}
-        </div>
-      </li>
-    </a>
+        </li>
+      </a>
+    </div>
+    {% endfor %} {% assign empty_count = site.paginate | minus:
+    paginator.posts.size %} {% for i in (1..empty_count) %}
+    <div></div>
     {% endfor %}
   </ul>
 

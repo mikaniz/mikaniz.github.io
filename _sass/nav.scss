@@ -70,8 +70,8 @@ nav {
     justify-content: center;
     height: 100px;
     font-size: 30px;
-    text-shadow: -3px 0 $text-color, 0 3px $text-color, 3px 0 $text-color,
-      0 -3px $text-color;
+    text-shadow: -1px 0 $text-color, 0 1px $text-color, 1px 0 $text-color,
+      0 -1px $text-color;
     div {
       display: none;
     }
