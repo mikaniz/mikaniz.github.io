@@ -26,6 +26,9 @@ body {
   ul {
     padding-left: 20px;
   }
+  img {
+    width: 100%;
+  }
 }
 
 main {
@@ -33,7 +36,6 @@ main {
   padding-top: 100px;
   * {
     box-sizing: border-box;
-    word-break: keep-all;
   }
   article {
     position: relative;
@@ -89,7 +91,10 @@ footer {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
   }
 }
 
